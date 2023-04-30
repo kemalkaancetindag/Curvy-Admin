@@ -5,7 +5,7 @@ import ProtectedRoute from './util/ProtectedRoute'
 
 
 function App() {
-  var user = false;
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -13,13 +13,13 @@ function App() {
         <Route 
           path='/login' 
           element={
-            <ProtectedRoute children={<Login/>} user={user}/>
+            <ProtectedRoute children={<Login/>}/>
           }
         />
         <Route 
           path='/' 
           element={
-            <ProtectedRoute children={<Index/>} user={user}/>
+            <ProtectedRoute children={<Index/>}/>
           }
         />
       </Routes>
